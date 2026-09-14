@@ -1,4 +1,4 @@
-# Stealth Model Fingerprint Lab
+# Stealth-Eye
 
 A small, reproducible toolkit for asking a disciplined question about an
 unidentified model: **which supplied reference model has the most similar
