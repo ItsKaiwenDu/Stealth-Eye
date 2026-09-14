@@ -515,9 +515,10 @@ def parse_args():
 
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("command", nargs="?", choices=["validate", "run"], default="run")
+    default_study = "example/ox-alpha" if (Path.cwd() / "example/ox-alpha").is_dir() else "."
     parser.add_argument(
-        "--study", default=".",
-        help="Study directory containing manifest.csv and data/ (default: current directory)",
+        "--study", default=default_study,
+        help=f"Study directory containing manifest.csv and data/ (default: {default_study})",
     )
     return parser.parse_args()
 

@@ -9,8 +9,8 @@ import sys
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parent
-TEMPLATE = ROOT / "studies" / "template"
+ROOT = Path(__file__).resolve().parent.parent
+TEMPLATE = ROOT / "data" / "template"
 
 
 def main() -> int:

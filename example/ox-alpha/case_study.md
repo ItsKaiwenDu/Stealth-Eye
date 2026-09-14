@@ -17,8 +17,8 @@ outside context that connects that behavior to GLM-5.3-Flash.
 The included corpus was collected on August 25, 2026 through the OpenRouter
 Chat Completions API. Each cell used a fresh single-turn request. Only final
 visible answers were saved; generation IDs, API keys, and reasoning traces are
-absent. The full prompt text is in [`prompts.md`](../prompts.md), and request
-metadata is in [`data/metadata`](../data/metadata).
+absent. The full prompt text is in [`prompts.md`](prompts.md), and request
+metadata is in [`data/metadata`](data/metadata).
 
 The original candidate set was GLM-5.3, GLM-5.2, GLM-5, MiMo V2.5, DeepSeek V4
 Flash, Gemini 3.7 Flash, and MiniMax M3. Ox Alpha was the sole target. The
@@ -30,7 +30,7 @@ Several models used native/default reasoning because forcing an incompatible
 gateway setting produced empty visible outputs. This is a real limitation, not
 a data-cleaning decision. Details, including retries and a length-truncated
 GLM-5.2 p10 response retained unchanged, are in the
-[`experiment log`](../experiment_log.md).
+[`experiment log`](experiment_log.md).
 
 ## Result
 
@@ -50,10 +50,10 @@ and 4,000 prompt-bootstrap resamples. GLM-5.3 was the nearest reference on all
 | GLM-5.3 prompt votes | 11 / 11 |
 | GLM-5.3 bootstrap winner rate | 100.0% |
 
-The reproducible artifacts are the [report](../results/report.md),
-[per-prompt predictions](../results/predictions.csv),
-[control confusion matrix](../results/confusion.csv), and
-[summary JSON](../results/summary.json).
+The reproducible artifacts are the [report](results/report.md),
+[per-prompt predictions](results/predictions.csv),
+[control confusion matrix](results/confusion.csv), and
+[summary JSON](results/summary.json).
 
 ## What it supports—and what it does not
 
@@ -72,5 +72,5 @@ why its generated report remains `SCREENING ONLY` even with a unanimous leader.
 The right lesson is methodological: with matched prompts, credible controls,
 reference-only preprocessing, and conservative reporting, a small stylometry
 screen can provide a useful directional map when a new model appears. Follow
-the [general protocol](PROTOCOL.md) before treating this case as a template for
+the [general protocol](../../protocol.md) before treating this case as a template for
 any new attribution claim.
